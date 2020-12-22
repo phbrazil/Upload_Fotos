@@ -22,10 +22,9 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author paulo.bezerra
  */
-@WebServlet(name = "fotos", urlPatterns = {"/API/addFoto"})
+@WebServlet(name = "addFotos", urlPatterns = {"/API/addFoto"})
 public class addFoto extends HttpServlet {
 
-    //private Gson gson = new Gson();
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
