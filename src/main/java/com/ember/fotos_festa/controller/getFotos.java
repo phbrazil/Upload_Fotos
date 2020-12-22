@@ -28,8 +28,6 @@ public class getFotos extends HttpServlet {
             throws ServletException, IOException {
 
         if (request.getParameter("token").equals("9ember_2020")) {
-
-
             
 
             //String projectJsonString = this.gson.toJson(projeto);

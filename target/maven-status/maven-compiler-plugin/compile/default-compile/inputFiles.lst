@@ -1,1 +1,7 @@
 /Users/Paulo/NetBeansProjects/Fotos_Festa/src/main/java/com/ember/fotos_festa/controller/getFotos.java
+/Users/Paulo/NetBeansProjects/Fotos_Festa/src/main/java/com/ember/fotos_festa/model/foto/exceptions/PreexistingEntityException.java
+/Users/Paulo/NetBeansProjects/Fotos_Festa/src/main/java/com/ember/fotos_festa/model/foto/tbFotos.java
+/Users/Paulo/NetBeansProjects/Fotos_Festa/src/main/java/com/ember/fotos_festa/dao/foto/AddFoto.java
+/Users/Paulo/NetBeansProjects/Fotos_Festa/src/main/java/com/ember/fotos_festa/model/foto/exceptions/NonexistentEntityException.java
+/Users/Paulo/NetBeansProjects/Fotos_Festa/src/main/java/com/ember/fotos_festa/model/foto/tbFotosJpaController.java
+/Users/Paulo/NetBeansProjects/Fotos_Festa/src/main/java/com/ember/fotos_festa/model/foto/exceptions/IllegalOrphanException.java

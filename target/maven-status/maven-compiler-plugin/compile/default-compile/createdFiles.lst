@@ -1,1 +1,7 @@
+com/ember/fotos_festa/model/foto/exceptions/PreexistingEntityException.class
+com/ember/fotos_festa/model/foto/tbFotosJpaController.class
+com/ember/fotos_festa/model/foto/exceptions/NonexistentEntityException.class
 com/ember/fotos_festa/controller/getFotos.class
+com/ember/fotos_festa/model/foto/tbFotos.class
+com/ember/fotos_festa/dao/foto/AddFoto.class
+com/ember/fotos_festa/model/foto/exceptions/IllegalOrphanException.class
