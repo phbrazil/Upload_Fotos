@@ -30,6 +30,7 @@ public class tbFotos implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
+    private String name;
     private String email;
     private String path;
     private String date;
@@ -38,11 +39,20 @@ public class tbFotos implements Serializable {
         
     }
 
-    public tbFotos(Integer id, String email, String path, String date) {
+    public tbFotos(Integer id, String name, String email, String path, String date) {
         this.id = id;
+        this.name = name;
         this.email = email;
         this.path = path;
         this.date = date;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
     
     

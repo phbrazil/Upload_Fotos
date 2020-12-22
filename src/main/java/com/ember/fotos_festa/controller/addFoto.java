@@ -30,10 +30,14 @@ public class addFoto extends HttpServlet {
             throws ServletException, IOException {
 
         if (request.getParameter("token").equals("9ember_2020")) {
+            
+            String name = request.getParameter("name");
+            
+            String email = request.getParameter("email");
 
             String date = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").format(Calendar.getInstance().getTime());
 
-            tbFotos foto = new tbFotos(1, "pauloh2012sul@gmail.com", "/home/documents", date);
+            tbFotos foto = new tbFotos(1, name, email, "/home/documents", date);
             
             AddFotoDAO add = new AddFotoDAO();
             

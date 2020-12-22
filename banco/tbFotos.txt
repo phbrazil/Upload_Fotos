@@ -1,10 +1,11 @@
 drop table tbFotos;
 
 CREATE TABLE tbFotos(
-Id INT NOT NULL AUTO_INCREMENT,
-Email varchar(60) unique NOT NULL default '',
-Date varchar(20) NOT NULL default '',
-Path varchar(200) not null default '',
+id INT NOT NULL AUTO_INCREMENT,
+email varchar(60) unique NOT NULL default '',
+name varchar(100) not null default '',
+date varchar(20) NOT NULL default '',
+path varchar(200) not null default '',
 PRIMARY KEY (id));
 
 
