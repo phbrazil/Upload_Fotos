@@ -34,18 +34,20 @@ public class addFoto extends HttpServlet {
             String name = request.getParameter("name");
             
             String email = request.getParameter("email");
+            
+            String message = request.getParameter("message");
 
             String date = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").format(Calendar.getInstance().getTime());
 
-            tbFotos foto = new tbFotos(1, name, email, "/home/documents", date);
+            tbFotos foto = new tbFotos(1, name, email, message, "/home/documents", date);
             
             AddFotoDAO add = new AddFotoDAO();
             
             add.AddFoto(foto);
             
-            JSONObject message = new JSONObject();
+            JSONObject status = new JSONObject();
             
-            message.put("message", "success");
+            status.put("status", "success");
 
             //String projectJsonString = this.gson.toJson(projeto);
             PrintWriter out = response.getWriter();

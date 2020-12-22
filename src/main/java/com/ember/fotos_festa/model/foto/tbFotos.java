@@ -32,6 +32,7 @@ public class tbFotos implements Serializable {
     private Integer id;
     private String name;
     private String email;
+    private String message;
     private String path;
     private String date;
     
@@ -39,10 +40,11 @@ public class tbFotos implements Serializable {
         
     }
 
-    public tbFotos(Integer id, String name, String email, String path, String date) {
+    public tbFotos(Integer id, String name, String email, String message, String path, String date) {
         this.id = id;
         this.name = name;
         this.email = email;
+        this.message = message;
         this.path = path;
         this.date = date;
     }
@@ -64,6 +66,16 @@ public class tbFotos implements Serializable {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+    
+    
 
     public String getPath() {
         return path;
