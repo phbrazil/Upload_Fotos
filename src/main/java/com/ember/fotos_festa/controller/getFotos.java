@@ -36,10 +36,6 @@ public class getFotos extends HttpServlet {
             ListFotosDAO list = new ListFotosDAO();
             List<tbFotos> fotos = list.List();
             
-            for(int i = 0;i<fotos.size();i++){
-                System.out.println(gson.toJson(fotos.get(i)));
-            }
-
             PrintWriter out = response.getWriter();
             response.setContentType("application/json");
             response.setCharacterEncoding("UTF-8");

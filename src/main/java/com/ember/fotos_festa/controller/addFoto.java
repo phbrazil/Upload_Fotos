@@ -29,6 +29,13 @@ public class addFoto extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
+
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
         if (request.getParameter("token").equals("9ember_2020")) {
             
             String name = request.getParameter("name");
@@ -53,7 +60,7 @@ public class addFoto extends HttpServlet {
             PrintWriter out = response.getWriter();
             response.setContentType("application/json");
             response.setCharacterEncoding("UTF-8");
-            out.print(message);
+            out.print(status);
             out.flush();
 
         } else {
@@ -64,14 +71,6 @@ public class addFoto extends HttpServlet {
             out.flush();
 
         }
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-
-        System.out.println("entrei no post API");
-
     }
 
     @Override
