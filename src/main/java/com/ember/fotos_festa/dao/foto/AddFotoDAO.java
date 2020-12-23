@@ -17,7 +17,7 @@ import org.hibernate.cfg.Configuration;
  */
 public class AddFotoDAO {
 
-    public Integer AddFoto(tbFotos foto) {
+    public tbFotos AddFoto(tbFotos foto) {
         
         int id = 0;
 
@@ -50,7 +50,11 @@ public class AddFotoDAO {
             }
         }
         
-        return  id;
+        getFotoDAO get = new getFotoDAO();
+        
+        foto = get.getFoto(id);
+        
+        return  foto;
 
     }
 
