@@ -1,10 +1,11 @@
+com/ember/fotos_festa/model/foto/tbFotosJpaController.class
+com/ember/fotos_festa/dao/foto/UpdateFotoDAO.class
+com/ember/fotos_festa/model/foto/exceptions/NonexistentEntityException.class
+com/ember/fotos_festa/dao/foto/ListFotosDAO.class
+com/ember/fotos_festa/model/foto/exceptions/IllegalOrphanException.class
 com/ember/fotos_festa/dao/foto/AddFotoDAO.class
 com/ember/fotos_festa/model/foto/exceptions/PreexistingEntityException.class
-com/ember/fotos_festa/model/foto/tbFotosJpaController.class
-com/ember/fotos_festa/model/foto/exceptions/NonexistentEntityException.class
 com/ember/fotos_festa/controller/addFoto.class
-com/ember/fotos_festa/dao/foto/ListFotosDAO.class
 com/ember/fotos_festa/controller/getFotos.class
 com/ember/fotos_festa/model/foto/tbFotos.class
-com/ember/fotos_festa/model/foto/exceptions/IllegalOrphanException.class
 com/ember/fotos_festa/dao/foto/getFotoDAO.class

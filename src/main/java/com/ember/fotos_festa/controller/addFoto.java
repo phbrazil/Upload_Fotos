@@ -7,6 +7,7 @@ package com.ember.fotos_festa.controller;
 
 import org.json.JSONObject;
 import com.ember.fotos_festa.dao.foto.AddFotoDAO;
+import com.ember.fotos_festa.dao.foto.UpdateFotoDAO;
 import com.ember.fotos_festa.model.foto.tbFotos;
 import com.oreilly.servlet.MultipartRequest;
 import java.io.File;
@@ -47,13 +48,13 @@ public class addFoto extends HttpServlet {
 
         MultipartRequest m = new MultipartRequest(request, tempPath, 26214400, "UTF-8");
 
-        if (request.getParameter("token").equals("9ember_2020")) {
+        if (m.getParameter("token").equals("9ember_2020")) {
 
-            String name = request.getParameter("name");
+            String name = m.getParameter("name");
 
-            String email = request.getParameter("email");
+            String email = m.getParameter("email");
 
-            String message = request.getParameter("message");
+            String message = m.getParameter("message");
 
             String date = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").format(Calendar.getInstance().getTime());
 
@@ -110,6 +111,10 @@ public class addFoto extends HttpServlet {
 
                 }
             }
+            
+            UpdateFotoDAO update = new UpdateFotoDAO();
+            
+            update.Update(foto);
 
             JSONObject status = new JSONObject();
 
