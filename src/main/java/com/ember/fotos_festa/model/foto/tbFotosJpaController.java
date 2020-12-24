@@ -17,7 +17,7 @@ import javax.persistence.criteria.Root;
 
 /**
  *
- * @author Leonardo
+ * @author Paulo
  */
 public class tbFotosJpaController implements Serializable {
 
