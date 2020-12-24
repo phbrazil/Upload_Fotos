@@ -122,7 +122,7 @@ public class addFoto extends HttpServlet {
                         fileNames.add(String.valueOf(aFile));
                         System.out.println("arquivo " + aFile + " adicionado na lista");
 
-                        foto.setPath("/fotos/" + foto.getId() + slash + aFile);
+                        foto.setPath("/fotosFesta/" + foto.getId() + slash + aFile);
 
                     }
                 }

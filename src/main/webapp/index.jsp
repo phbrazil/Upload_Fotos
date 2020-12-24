@@ -29,12 +29,12 @@
                         <input type="email" name='email' class="form-control" id="exampleFormControlInput1" placeholder="nome@exemplo.com" required>
                     </div>
 
-                    <div class="custom-file">
-                        <input type="file" name="anexo" id='i_file' class="custom-file-input" id="validatedCustomFile" required>
-                        <label class="custom-file-label" for="validatedCustomFile">Sua foto...</label>
-                        <div id="filestatus"></div>
+                    <div class="custom-file mb-2">
+                        <input type="file" onchange="ValidateSize(this)" class="custom-file-input needs-validation" name='anexo'  id = 'i_file' required>
+                        <label class="custom-file-label" for="validatedCustomFile">Sua Foto...</label>
+                        <div class="invalid-feedback">Foto invalida</div>
                     </div>
-
+                    <div id="filestatus"></div>
 
                     <div class="form-group mt-2">
                         <label for="exampleFormControlTextarea1">Mensagem</label>

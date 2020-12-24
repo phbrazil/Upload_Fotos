@@ -22,45 +22,28 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author paulo.bezerra
  */
-@WebServlet(name = "getFotos", urlPatterns = {"/API/getFotos"})
-public class getFotos extends HttpServlet {
+@WebServlet(name = "admin", urlPatterns = {"/admin"})
+public class admin extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+
         //API JSON
+        ListFotosDAO list = new ListFotosDAO();
 
-        if (request.getParameter("token").equals("9ember_2020")) {
-            
-            Gson gson = new Gson();
+        List<tbFotos> fotos = list.List();
 
-            ListFotosDAO list = new ListFotosDAO();
-            List<tbFotos> fotos = list.List();
-            
-            PrintWriter out = response.getWriter();
-            response.setContentType("application/json");
-            response.setCharacterEncoding("UTF-8");
-            out.print(gson.toJson(fotos));
-            out.flush();
+        request.setAttribute("fotos", fotos);
 
-        } else {
-            PrintWriter out = response.getWriter();
-            response.setContentType("application/json");
-            response.setCharacterEncoding("UTF-8");
-            out.print("Bad Token Code");
-            out.flush();
+        request.getRequestDispatcher("carrousel.jsp").forward(request, response);
 
-        }
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-
-        
-        
     }
 
     @Override

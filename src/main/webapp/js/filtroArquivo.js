@@ -25,7 +25,7 @@ function ValidateSize(file) {
             $('#filestatus > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                     .append("</button>");
             $('#filestatus > .alert-danger')
-                    .append("<strong>File name is too large, please rename before upload! </strong>");
+                    .append("<strong>Arquivo muito grande, favor anexe um arquivo menor! </strong>");
             $('#filestatus > .alert-danger')
                     .append('</div>');
 
@@ -53,7 +53,7 @@ function ValidateSize(file) {
             $('#filestatus > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                     .append("</button>");
             $('#filestatus > .alert-success')
-                    .append("<strong>File " + filename + " accepted! </strong>");
+                    .append("<strong>Arquivo " + filename + " aceito! </strong>");
             $('#filestatus > .alert-success')
                     .append('</div>');
 
