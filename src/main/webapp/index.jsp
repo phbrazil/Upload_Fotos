@@ -30,9 +30,9 @@
                     </div>
 
                     <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+                        <input type="file" name="anexo" id='i_file' class="custom-file-input" id="validatedCustomFile" required>
                         <label class="custom-file-label" for="validatedCustomFile">Sua foto...</label>
-                        <div class="invalid-feedback">Foto invalida</div>
+                        <div id="filestatus"></div>
                     </div>
 
 
@@ -49,6 +49,7 @@
 
     </body>
 
+    <script src="js/filtroArquivo.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
