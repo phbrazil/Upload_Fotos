@@ -70,11 +70,11 @@ public class addFoto extends HttpServlet {
             AddFotoDAO add = new AddFotoDAO();
 
             int id = add.AddFoto(foto);
-            
+
             getFotoDAO getFoto = new getFotoDAO();
-            
+
             foto = getFoto.getFoto(id);
-            
+
             if (foto != null) {
 
                 //String slash = "\\";
@@ -92,8 +92,14 @@ public class addFoto extends HttpServlet {
                 }
                 File tempFile = new File(tempPath);
 
-                FileUtils.copyDirectory(tempFile, destFile);
-                System.out.println("Arquivo copiado da temp para arquivos");
+                try {
+
+                    FileUtils.copyDirectory(tempFile, destFile);
+                    System.out.println("Arquivo copiado da temp para arquivos");
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
 
                 try {
                     FileUtils.deleteDirectory(tempFile);
@@ -129,7 +135,7 @@ public class addFoto extends HttpServlet {
 
                 status.put("status", "success");
 
-                response.sendRedirect("success.html");
+                response.sendRedirect("messages/success.html");
 
             } else {
                 response.sendRedirect("messages/success.html");
