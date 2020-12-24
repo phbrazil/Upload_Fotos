@@ -93,57 +93,99 @@
     </head>
     <body style="background-color: black">
 
+        <div class="container">
 
-        <div id="carouselExampleControls" class="carousel slide mt-4 ml-4 mr-4" data-ride="carousel">
-            <div class="carousel-inner">
+            <div id="carouselExampleControls" class="carousel slide mt-4 ml-4 mr-4" data-ride="carousel">
+                <div class="carousel-inner">
 
-                <div class="container h-100 mb-4">
-                    <div class="d-flex h-100 text-center align-items-center">
-                        <div class="w-100 text-white">
-                            <div id="carouselExampleIndicators" class="carousel slide font-weight-bold"  data-interval="false">
-                                <div class="carousel-inner">
-                                    <c:forEach items="${fotos}" var="element" varStatus="loop"> 
+                    <div class="container h-100 mb-4">
+                        <div class="d-flex h-100 text-center align-items-center">
+                            <div class="w-100 text-white">
+                                <div id="carouselExampleIndicators" class="carousel slide font-weight-bold"  data-interval="false">
+                                    <div class="carousel-inner">
+                                        <c:forEach items="${fotos}" var="element" varStatus="loop"> 
 
 
-                                        <c:choose>
-                                            <c:when test = "${loop.index == 0}">
-                                                <div class="carousel-item active">
-                                                </c:when>    
-                                                <c:otherwise>
-                                                    <div class="carousel-item ">
-                                                    </c:otherwise>
-                                                </c:choose>
+                                            <c:choose>
+                                                <c:when test = "${loop.index == 0}">
+                                                    <div class="carousel-item active">
+                                                    </c:when>    
+                                                    <c:otherwise>
+                                                        <div class="carousel-item ">
+                                                        </c:otherwise>
+                                                    </c:choose>
 
-                                                <div class="d-flex h-100 d-flex justify-content-center">
-                                                    <div class="text-white">
-                                                        <h1>Bem-vindo à <strong style="color: lightseagreen">Festa sei la man</strong></h1>
-                                                        <img class="d-block w-100" style="width: 400px; height: 500px" src="${pageContext.request.contextPath}/${element.path}" alt="First slide">
-                                                        <div class="carousel-caption d-none d-md-block">
-                                                            <h1>${element.name}</h1>
-                                                            <h4>${element.message}</h4>
-                                                            <h1>${loop.index}</h1>
+                                                    <div class="d-flex h-100 d-flex justify-content-center">
+                                                        <div class="text-white">
+                                                            <h1>Bem-vindo à <strong style="color: lightseagreen">Festa sei la man</strong></h1>
+                                                            <img class="d-block w-100" style="width: 400px; height: 500px" src="${pageContext.request.contextPath}/${element.path}" alt="First slide">
+                                                            <div class="carousel-caption d-none d-md-block">
+                                                                <h1>${element.name}</h1>
+                                                                <h4>${element.message}</h4>
+                                                                <h1>${loop.index}</h1>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </div>   
-                                        </c:forEach>
+                                                </div>   
+                                            </c:forEach>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+
                     </div>
-
-
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Voltar</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Avançar</span>
+                    </a>
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Voltar</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Avançar</span>
-                </a>
+
+                <footer class="pt-4 my-md-5 pt-md-5 border-top">
+                    <div class="row">
+                        <div class="col-12 col-md">
+                            <img class="mb-2" src="assets/logo_9ember.png" alt="" width="40" height="30">
+                            <p><a href="https://www.9ember.com" target="_blank">9ember</a></p>
+                            <small class="d-block mb-3 text-muted">&copy; 2020-2021</small>
+                        </div>
+                        <div class="col-6 col-md">
+                            <h5>Features</h5>
+                            <ul class="list-unstyled text-small">
+                                <li><a class="text-muted" href="#">Cool stuff</a></li>
+                                <li><a class="text-muted" href="#">Random feature</a></li>
+                                <li><a class="text-muted" href="#">Team feature</a></li>
+                                <li><a class="text-muted" href="#">Stuff for developers</a></li>
+                                <li><a class="text-muted" href="#">Another one</a></li>
+                                <li><a class="text-muted" href="#">Last time</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-md">
+                            <h5>Resources</h5>
+                            <ul class="list-unstyled text-small">
+                                <li><a class="text-muted" href="#">Resource</a></li>
+                                <li><a class="text-muted" href="#">Resource name</a></li>
+                                <li><a class="text-muted" href="#">Another resource</a></li>
+                                <li><a class="text-muted" href="#">Final resource</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-md">
+                            <h5>About</h5>
+                            <ul class="list-unstyled text-small">
+                                <li><a class="text-muted" href="#">Team</a></li>
+                                <li><a class="text-muted" href="#">Locations</a></li>
+                                <li><a class="text-muted" href="#">Privacy</a></li>
+                                <li><a class="text-muted" href="#">Terms</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </footer>
             </div>
+        </div>
 
     </body>
 
