@@ -118,7 +118,7 @@
                                                     <div class="d-flex h-100 d-flex justify-content-center">
                                                         <div class="text-white">
                                                             <h1>Bem-vindo à <strong style="color: lightseagreen">Festa sei la man</strong></h1>
-                                                            <img class="d-block w-100" style="width: 200px; height: 400px" src="${pageContext.request.contextPath}/${element.path}" alt="First slide">
+                                                            <img class="d-block w-100" style="width: 200px; height: 400px" src="${element.path}" alt="First slide">
                                                             <div class="carousel-caption d-none d-md-block">
                                                                 <h1>${element.name}</h1>
                                                                 <h4>${element.message}</h4>
