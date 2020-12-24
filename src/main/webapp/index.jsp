@@ -67,7 +67,7 @@
                         </ul>
                     </div>
                     <div class="col-6 col-md">
-                        <h5>Resources</h5>
+                        <h5>Recursos</h5>
                         <ul class="list-unstyled text-small">
                             <li><a class="text-muted" href="#">Resource</a></li>
                             <li><a class="text-muted" href="#">Resource name</a></li>
@@ -76,12 +76,10 @@
                         </ul>
                     </div>
                     <div class="col-6 col-md">
-                        <h5>About</h5>
+                        <h5>Nosso Time</h5>
                         <ul class="list-unstyled text-small">
-                            <li><a class="text-muted" href="#">Team</a></li>
-                            <li><a class="text-muted" href="#">Locations</a></li>
-                            <li><a class="text-muted" href="#">Privacy</a></li>
-                            <li><a class="text-muted" href="#">Terms</a></li>
+                            <li><a class="text-muted" href="#">Paulo</a></li>
+                            <li><a class="text-muted" href="#">Rafael</a></li>
                         </ul>
                     </div>
                 </div>
