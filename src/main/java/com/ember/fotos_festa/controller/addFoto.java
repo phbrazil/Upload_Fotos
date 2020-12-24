@@ -8,6 +8,7 @@ package com.ember.fotos_festa.controller;
 import org.json.JSONObject;
 import com.ember.fotos_festa.dao.foto.AddFotoDAO;
 import com.ember.fotos_festa.dao.foto.UpdateFotoDAO;
+import com.ember.fotos_festa.dao.foto.getFotoDAO;
 import com.ember.fotos_festa.model.foto.tbFotos;
 import com.oreilly.servlet.MultipartRequest;
 import java.io.File;
@@ -29,7 +30,7 @@ import java.io.IOException;
  *
  * @author paulo.bezerra
  */
-@WebServlet(name = "addFotos", urlPatterns = {"/API/addFoto"})
+@WebServlet(name = "addFotos", urlPatterns = {"/addFoto"})
 public class addFoto extends HttpServlet {
 
     @Override
@@ -41,8 +42,6 @@ public class addFoto extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
-        System.out.println("++++++++++++++=");
 
         //String tempPath = "/home/opportunity/tempFotos/";
         //String tempPath = "C:\\Users\\paulo.bezerra\\Documents\\NetBeansProjects\\Fotos_Festa\\temFotos\\";
@@ -61,7 +60,7 @@ public class addFoto extends HttpServlet {
             String date = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").format(Calendar.getInstance().getTime());
 
             tbFotos foto = new tbFotos(1, name, email, message, "", date);
-            
+
             System.out.println(foto.toString());
 
             //String destPath = "/opt/tomcat/apache-tomee-webprofile-7.0.2/webapps/fotosFesta/";
@@ -70,61 +69,72 @@ public class addFoto extends HttpServlet {
 
             AddFotoDAO add = new AddFotoDAO();
 
-            foto = add.AddFoto(foto);
+            int id = add.AddFoto(foto);
+            
+            getFotoDAO getFoto = new getFotoDAO();
+            
+            foto = getFoto.getFoto(id);
+            
+            if (foto != null) {
 
-            //String slash = "\\";
-            String slash = "/";
+                //String slash = "\\";
+                String slash = "/";
 
-            //GRAVAR ANEXOS
-            File destFile = new File(destPath + String.valueOf(foto.getId()) + slash);
+                //GRAVAR ANEXOS
+                File destFile = new File(destPath + String.valueOf(foto.getId()) + slash);
 
-            if (!destFile.exists()) {
-                if (destFile.mkdir()) {
-                    System.out.println("Diretório criado no caminho " + String.valueOf(destFile));
+                if (!destFile.exists()) {
+                    if (destFile.mkdir()) {
+                        System.out.println("Diretório criado no caminho " + String.valueOf(destFile));
+                    } else {
+                        System.out.println("Falha ao criar o diretório " + String.valueOf(destFile));
+                    }
+                }
+                File tempFile = new File(tempPath);
+
+                FileUtils.copyDirectory(tempFile, destFile);
+                System.out.println("Arquivo copiado da temp para arquivos");
+
+                try {
+                    FileUtils.deleteDirectory(tempFile);
+                    System.out.println("Pasta temp deletada");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                tempFile.mkdir();
+                System.out.println("Pasta temp criada novamente");
+
+                List<String> fileNames = new ArrayList<>();
+
+                // gravar nomes dos arquivos
+                String[] files = destFile.list();
+                if (files.length == 0) {
+                    System.out.println("Pasta de arquivos vazia");
                 } else {
-                    System.out.println("Falha ao criar o diretório " + String.valueOf(destFile));
+                    for (String aFile : files) {
+                        fileNames.add(String.valueOf(aFile));
+                        System.out.println("arquivo " + aFile + " adicionado na lista");
+
+                        foto.setPath("/fotos/" + foto.getId() + slash + aFile);
+
+                    }
                 }
-            }
-            File tempFile = new File(tempPath);
 
-            // FileUtils.copyDirectory(tempFile, destFile);
-            System.out.println("Arquivo copiado da temp para arquivos");
+                UpdateFotoDAO update = new UpdateFotoDAO();
 
-            try {
-                FileUtils.deleteDirectory(tempFile);
-                System.out.println("Pasta temp deletada");
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+                update.Update(foto);
 
-            tempFile.mkdir();
-            System.out.println("Pasta temp criada novamente");
+                JSONObject status = new JSONObject();
 
-            List<String> fileNames = new ArrayList<>();
+                status.put("status", "success");
 
-            // gravar nomes dos arquivos
-            String[] files = destFile.list();
-            if (files.length == 0) {
-                System.out.println("Pasta de arquivos vazia");
+                response.sendRedirect("success.html");
+
             } else {
-                for (String aFile : files) {
-                    fileNames.add(String.valueOf(aFile));
-                    System.out.println("arquivo " + aFile + " adicionado na lista");
+                response.sendRedirect("messages/success.html");
 
-                    foto.setPath("/fotos/" + foto.getId() + slash + aFile);
-
-                }
             }
-
-            UpdateFotoDAO update = new UpdateFotoDAO();
-
-            update.Update(foto);
-
-            JSONObject status = new JSONObject();
-
-            status.put("status", "success");
-
-            response.sendRedirect("success.html");
 
             //String projectJsonString = this.gson.toJson(projeto);
             /*PrintWriter out = response.getWriter();

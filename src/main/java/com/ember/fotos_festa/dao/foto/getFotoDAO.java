@@ -46,4 +46,14 @@ public class getFotoDAO {
         return foto;
     }
     
+    public static void main(String[] args) {
+        
+        getFotoDAO get = new getFotoDAO();
+        
+        tbFotos foto = get.getFoto(16);
+        
+        System.out.println(foto.toString());
+        
+    }
+    
 }

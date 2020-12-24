@@ -19,7 +19,7 @@
         <div class="d-flex p-4">
             <div class="col-md-10 mt-4">
 
-                <form class= 'ui-autocompletar needs-validation' enctype="multipart/form-data" name = "addFoto"  novalidate id = "addFoto" action="${pageContext.request.contextPath}/API/addFoto" method="POST">
+                <form class= 'ui-autocompletar needs-validation' enctype="multipart/form-data" name = "addFoto"  novalidate id = "addFoto" action="${pageContext.request.contextPath}/addFoto" method="POST">
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Nome</label>
                         <input type="text" name='name' class="form-control" id="exampleFormControlInput1" placeholder="" required>
