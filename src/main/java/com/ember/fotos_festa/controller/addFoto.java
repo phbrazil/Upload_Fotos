@@ -42,6 +42,8 @@ public class addFoto extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
+        System.out.println("++++++++++++++=");
+
         //String tempPath = "/home/opportunity/tempFotos/";
         //String tempPath = "C:\\Users\\paulo.bezerra\\Documents\\NetBeansProjects\\Fotos_Festa\\temFotos\\";
         String tempPath = "/Users/Paulo/NetBeansProjects/Fotos_Festa/tempFotos/";
@@ -111,22 +113,23 @@ public class addFoto extends HttpServlet {
 
                 }
             }
-            
+
             UpdateFotoDAO update = new UpdateFotoDAO();
-            
+
             update.Update(foto);
 
             JSONObject status = new JSONObject();
 
             status.put("status", "success");
 
+            response.sendRedirect("success.html");
+
             //String projectJsonString = this.gson.toJson(projeto);
-            PrintWriter out = response.getWriter();
+            /*PrintWriter out = response.getWriter();
             response.setContentType("application/json");
             response.setCharacterEncoding("UTF-8");
             out.print(status);
-            out.flush();
-
+            out.flush();*/
         } else {
             PrintWriter out = response.getWriter();
             response.setContentType("application/json");
