@@ -41,6 +41,7 @@
                         <textarea required name='message' class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                     </div>
 
+                    <input type="hidden" name="token" value="9ember_2020">
                     <button type='submit' id="submit" name="submit" onclick="return confirm('Confirma os dados preenchidos?');" class="btn btn-info btn-lg mb-2 waves-effect waves-light">Enviar<i class="fas fa-send ml-1"></i></button>
                 </form>
             </div>

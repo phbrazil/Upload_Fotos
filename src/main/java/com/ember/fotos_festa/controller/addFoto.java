@@ -61,6 +61,8 @@ public class addFoto extends HttpServlet {
             String date = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").format(Calendar.getInstance().getTime());
 
             tbFotos foto = new tbFotos(1, name, email, message, "", date);
+            
+            System.out.println(foto.toString());
 
             //String destPath = "/opt/tomcat/apache-tomee-webprofile-7.0.2/webapps/fotosFesta/";
             //String destPath = "C:\\Users\\paulo.bezerra\\Documents\\NetBeansProjects\\Fotos_Festa\\src\\main\\webapp\\fotos\\";
