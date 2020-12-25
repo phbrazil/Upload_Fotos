@@ -20,10 +20,10 @@
             <div class="d-flex p-4">
                 <div class="col-md-12 mt-4">
 
-                    <form class= 'ui-autocompletar needs-validation' enctype="multipart/form-data" name = "addFoto"  novalidate id = "addFoto" action="${pageContext.request.contextPath}/addFoto" method="POST">
+                    <form class= 'ui-autocompletar needs-validation' enctype="multipart/form-data" name = "${pageContext.request.contextPath}/addFoto"  novalidate id = "addFoto" action="${pageContext.request.contextPath}/addFoto" method="POST">
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Nome</label>
-                            <input type="text" name='name' class="form-control" id="exampleFormControlInput1" placeholder="" required>
+                            <input type="text" name='name' class="form-control" id="exampleFormControlInput1" placeholder="Maria" required>
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Email</label>
