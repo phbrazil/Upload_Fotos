@@ -111,5 +111,20 @@
                                 }, false);
                             })();
     </script>
+
+    <script>
+
+        $("#addFoto").submit(function () {
+
+            if ($("#name").val() != '' && 
+                    $("#email").val() != '' &&
+                    $("#message").val() != '' &&
+                    $("#i_file").val() != '') {
+                $('#submit').text('Aguarde...');
+                $(":submit", this).attr("disabled", "disabled");
+
+            }
+        });
+    </script>
 </html>
 
