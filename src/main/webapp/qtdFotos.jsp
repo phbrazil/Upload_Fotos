@@ -12,7 +12,8 @@
 <form>
     <fieldset class="text-muted">
         <legend>Novas Fotos 
-            <%                        // Set refresh, autoload time as 1 seconds
+            <%
+// Set refresh, autoload time as 1 seconds
                 HttpSession sessao = request.getSession();
 
                 // Get current time
@@ -21,9 +22,6 @@
                 ListFotosDAO list = new ListFotosDAO();
 
                 List<tbFotos> fotos = list.List();
-
-                System.out.println(fotos.size());
-                System.out.println(currentQtd);
 
                 //if (fotos.size() != currentQtd) {
                 response.setIntHeader("Refresh", 10);

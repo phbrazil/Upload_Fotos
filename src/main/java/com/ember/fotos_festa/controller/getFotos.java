@@ -30,6 +30,8 @@ public class getFotos extends HttpServlet {
             throws ServletException, IOException {
         
         //API JSON
+        
+        System.out.println("entrei no get");
 
         if (request.getParameter("token").equals("9ember_2020")) {
             
@@ -43,6 +45,7 @@ public class getFotos extends HttpServlet {
             response.setCharacterEncoding("UTF-8");
             out.print(gson.toJson(fotos));
             out.flush();
+            
 
         } else {
             PrintWriter out = response.getWriter();
