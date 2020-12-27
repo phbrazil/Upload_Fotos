@@ -4,6 +4,7 @@ CREATE TABLE tbFotos(
 id INT NOT NULL AUTO_INCREMENT,
 email varchar(60) unique NOT NULL default '',
 name varchar(100) not null default '',
+Message varchar(500) not null default '',
 date varchar(20) NOT NULL default '',
 path varchar(200) not null default '',
 PRIMARY KEY (id));

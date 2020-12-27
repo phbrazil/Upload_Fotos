@@ -16,6 +16,12 @@
             <page-encoding>UTF-8</page-encoding>
         </jsp-property-group>
     </jsp-config>
+    
+    <servlet>
+        <servlet-name>ListenerFoto</servlet-name>
+        <servlet-class>com.ember.fotos_festa.controller.ListenerFotoStarter</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
 
     <!--security-constraint>
         <web-resource-collection>
