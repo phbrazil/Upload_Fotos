@@ -5,6 +5,7 @@ import java.util.Calendar;
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 /**
@@ -15,11 +16,12 @@ import javax.servlet.http.HttpSession;
 public class ListenerFotoStarter extends HttpServlet {
     
 
-    public void init(HttpSession sessao) throws ServletException {
+    public void init() throws ServletException {
 
+        
         ListenerFotoRoutine rotina = new ListenerFotoRoutine(1);
         
-        sessao.setAttribute("qtd", 1);
+        //sessao.setAttribute("qtd", 1);
         
         System.out.println("started");
     }

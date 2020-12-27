@@ -17,11 +17,11 @@
         </jsp-property-group>
     </jsp-config>
     
-    <servlet>
+    <!--servlet>
         <servlet-name>ListenerFoto</servlet-name>
         <servlet-class>com.ember.fotos_festa.controller.ListenerFotoStarter</servlet-class>
         <load-on-startup>0</load-on-startup>
-    </servlet>
+    </servlet-->
 
     <!--security-constraint>
         <web-resource-collection>

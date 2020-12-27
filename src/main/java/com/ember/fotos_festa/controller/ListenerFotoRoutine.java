@@ -13,6 +13,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 /**
@@ -27,7 +28,7 @@ public class ListenerFotoRoutine {
     int i = 0;
 
     public ListenerFotoRoutine(int seconds) {
-
+        
         //timer.cancel();
         timer = new Timer();
 

@@ -38,8 +38,8 @@ public class admin extends HttpServlet {
         List<tbFotos> fotos = list.List();
 
         request.setAttribute("fotos", fotos);
-
-        //sessao.setAttribute("qtd", 1); 
+        
+        sessao.setAttribute("qtd", fotos.size()); 
         
         request.getRequestDispatcher("carrousel.jsp").forward(request, response);
 
