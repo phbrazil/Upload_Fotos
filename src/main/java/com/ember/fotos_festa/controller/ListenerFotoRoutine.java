@@ -26,7 +26,7 @@ public class ListenerFotoRoutine {
 
     int i = 0;
 
-    public ListenerFotoRoutine(int seconds, HttpSession sessao) {
+    public ListenerFotoRoutine(int seconds) {
 
         //timer.cancel();
         timer = new Timer();
@@ -48,7 +48,8 @@ public class ListenerFotoRoutine {
 
             String dataatual = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").format(Calendar.getInstance().getTime());
 
-            timer.schedule(new RemindTask(), 10);
+            //DEFINE A CADA QUANTOS SEGUNDOS ATUALIZA
+            timer.schedule(new RemindTask(), 10*1000);
 
 
             String horaAtual = new SimpleDateFormat("HH").format(Calendar.getInstance().getTime());
@@ -63,6 +64,13 @@ public class ListenerFotoRoutine {
 
         }
 
+    }
+    
+    public static void main(String[] args) {
+          
+          
+          
+        
     }
 
 }

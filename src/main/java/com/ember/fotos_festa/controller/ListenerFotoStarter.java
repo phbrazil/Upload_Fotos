@@ -17,9 +17,7 @@ public class ListenerFotoStarter extends HttpServlet {
 
     public void init(HttpSession sessao) throws ServletException {
 
-        String horaAtual = new SimpleDateFormat("HH").format(Calendar.getInstance().getTime());
-
-        ListenerFotoRoutine rotina = new ListenerFotoRoutine(30, sessao);
+        ListenerFotoRoutine rotina = new ListenerFotoRoutine(1);
         
         sessao.setAttribute("qtd", 1);
         
