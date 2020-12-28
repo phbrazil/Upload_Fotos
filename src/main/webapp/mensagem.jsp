@@ -86,7 +86,7 @@
             <div class="fullmenu-content">
                 <ul class="page-menu">
                     <li><a class="active" href="index.html">Home</a></li>
-                    <li><a href="contact.html">Enviar Felicitações</a></li>
+                    <li><a href="enviar-felicitacoes.html">Enviar Felicitações</a></li>
                     <li class="social">
                         <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
@@ -141,7 +141,7 @@
                         <div class="blog-post bottom_120">
                             <a class="blog-link" href="#">
                                 <figure class="bottom_60">
-                                    <img src="${pageContext.request.contextPath}/${element.path}" alt="">
+                                    <img src="${element.path}" alt="">
                                 </figure>
                             </a>
                             <div class="col-lg-10 offset-lg-1 content-outter">
