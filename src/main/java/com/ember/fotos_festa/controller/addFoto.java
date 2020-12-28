@@ -43,10 +43,10 @@ public class addFoto extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-       //String tempPath = "/home/opportunity/tempFotos/";
+        String tempPath = "/home/opportunity/tempFotos/";
         //String tempPath = "C:\\Users\\paulo.bezerra\\Documents\\NetBeansProjects\\Fotos_Festa\\temFotos\\";
         //String tempPath = "/Users/Paulo/NetBeansProjects/Fotos_Festa/tempFotos/";
-        String tempPath = "/Users/killuminatti08/NetBeansProjects/Fotos_Festa/tempFotos/";
+        //String tempPath = "/Users/killuminatti08/NetBeansProjects/Fotos_Festa/tempFotos/";
 
         MultipartRequest m = new MultipartRequest(request, tempPath, 26214400, "UTF-8");
 
@@ -62,10 +62,10 @@ public class addFoto extends HttpServlet {
 
             tbFotos foto = new tbFotos(1, name, email, message, "", date);
 
-            //String destPath = "/opt/tomcat/apache-tomee-webprofile-7.0.2/webapps/fotosFesta/";
+            String destPath = "/opt/tomcat/apache-tomee-webprofile-7.0.2/webapps/fotosFesta/";
             //String destPath = "C:\\Users\\paulo.bezerra\\Documents\\NetBeansProjects\\Fotos_Festa\\src\\main\\webapp\\fotos\\";
             //String destPath = "/Users/Paulo/NetBeansProjects/Fotos_Festa/src/main/webapp/fotosFesta/";
-            String destPath = "/Users/killuminatti08/NetBeansProjects/Fotos_Festa/src/main/webapp/fotosFesta/";
+            //String destPath = "/Users/killuminatti08/NetBeansProjects/Fotos_Festa/src/main/webapp/fotosFesta/";
 
             AddFotoDAO add = new AddFotoDAO();
 
@@ -76,7 +76,7 @@ public class addFoto extends HttpServlet {
             foto = getFoto.getFoto(id);
 
             if (foto != null) {
-                
+
                 System.out.println("entrei no if");
 
                 //String slash = "\\";
