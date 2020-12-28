@@ -9,6 +9,7 @@ com/ember/fotos_festa/controller/ListenerFotoRoutine$RemindTask.class
 com/ember/fotos_festa/dao/foto/AddFotoDAO.class
 com/ember/fotos_festa/model/foto/exceptions/PreexistingEntityException.class
 com/ember/fotos_festa/controller/addFoto.class
+com/ember/fotos_festa/controller/test.class
 com/ember/fotos_festa/controller/getFotos.class
 com/ember/fotos_festa/model/foto/tbFotos.class
 com/ember/fotos_festa/controller/ListenerFotoStarter.class

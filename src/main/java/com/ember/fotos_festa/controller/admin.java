@@ -11,6 +11,7 @@ import com.ember.fotos_festa.model.foto.tbFotos;
 import com.google.gson.Gson;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -18,6 +19,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import org.json.JSONObject;
 
 /**
  *
@@ -38,10 +40,20 @@ public class admin extends HttpServlet {
         List<tbFotos> fotos = list.List();
 
         request.setAttribute("fotos", fotos);
-        
-        sessao.setAttribute("qtd", fotos.size()); 
-        
-        request.getRequestDispatcher("carrousel.jsp").forward(request, response);
+        List<String> current = new ArrayList<>();
+
+                
+        for (int i = 0; i < fotos.size(); i++) {
+
+            current.add(fotos.get(i).getId().toString());
+        }
+
+        request.setAttribute("current", current);
+
+        sessao.setAttribute("qtd", fotos.size());
+
+        request.getRequestDispatcher("mensagem.jsp").forward(request, response);
+        //request.getRequestDispatcher("carrousel.jsp").forward(request, response);
 
     }
 
