@@ -25,15 +25,17 @@ function GetFotosHome() {
                         '<div class="modal-dialog modal-lg" role="document">' +
                         '<div class="modal-content">' +
                         '<div class="modal-header">' +
-                        '<h1 class="modal-title">' + json[k].name + '</h1>' +
+                        '<div class="row">' +
+                        '<h1 class="modal-title col-md-10">' + json[k].name + '</h1>' +
+                        '<div class="text-muted col-md-10 mt-2 mb-2"><p>' + json[k].message + '</p>' +
+                        '</div>' +
+                        '</div>' +
                         '<button type="button" class="close" data-dismiss="modal" aria-label="Close">' +
                         '<span aria-hidden="true">&times;</span>' +
                         '</button>' +
                         '</div>' +
                         '<div class="modal-body">' +
-                        '<img style="width: 100%; padding: 7px 0;" src="http://34.71.7.57' + json[k].path + '" alt="">' +
-                        '</div>' +
-                        '<div class="text-muted col-md-10"><p>' + json[k].message + '</p>' +
+                        '<img style="width: 100%; padding: 7px 0;" src="http://www.cyberoficina.com.br' + json[k].path + '" alt="">' +
                         '</div>' +
                         '<div class="modal-footer">' +
                         '<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>' +
