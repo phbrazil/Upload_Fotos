@@ -6,11 +6,11 @@ function GetFotos(current) {
     //debugger;
     $.ajax({
         type: "GET",
-        url: "https://www.cyberoficina.com.br/Fotos_Festa/API/getFotos",
+        url: "https://www.flexstats.com.br/API/getFotos",
         data: {token: "9ember_2020"},
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
-            'Access-Control-Allow-Origin': 'https://www.cyberoficina.com.br' 
+            'Access-Control-Allow-Origin': 'https://www.flexstats.com.br' 
         }, 
         dataType: "jsonp",
         success: function (result) {

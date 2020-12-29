@@ -28,24 +28,25 @@ public class getFotos extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        //API JSON
-        
-        System.out.println("entrei no get");
 
+        //API JSON
         if (request.getParameter("token").equals("9ember_2020")) {
-            
+
             Gson gson = new Gson();
 
             ListFotosDAO list = new ListFotosDAO();
             List<tbFotos> fotos = list.List();
-            
+
             PrintWriter out = response.getWriter();
             response.setContentType("application/json");
+            response.setHeader("Access-Control-Allow-Origin", request.getHeader("Origin"));
+            response.setHeader("Access-Control-Allow-Credentials", "true");
+            response.setHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS,DELETE");
+            response.setHeader("Access-Control-Max-Age", "3600");
+            response.setHeader("Access-Control-Allow-Headers", "Content-Type, Accept, X-Requested-With, remember-me");
             response.setCharacterEncoding("UTF-8");
             out.print(gson.toJson(fotos));
             out.flush();
-            
 
         } else {
             PrintWriter out = response.getWriter();
@@ -61,9 +62,6 @@ public class getFotos extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-
-        
-        
     }
 
     @Override

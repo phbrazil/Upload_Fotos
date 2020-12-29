@@ -5,14 +5,16 @@ function GetFotosHome() {
 //debugger;
     $.ajax({
         type: "GET",
-        url: "https://www.cyberoficina.com.br/Fotos_Festa/API/getFotos",
+        //url: "https://www.flexstats.com.br/API/getFotos",
+        url: "http://localhost:8080/Fotos_Festa/API/getFotos",
         data: {token: "9ember_2020"},
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
-            'Access-Control-Allow-Origin': 'https://www.cyberoficina.com.br'
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
 
         },
-        dataType: "jsonp",
+        dataType: "json",
         success: function (result) {
             //debugger;
 
@@ -21,8 +23,10 @@ function GetFotosHome() {
             for (var k = 0; k < (json.length); k++) {
 
                 var images = '<a href="#modal' + json[k].id + '" data-toggle="modal" data-target="#modal' + json[k].id + '">' +
-                        '<img src="https://www.cyberoficina.com.br' + json[k].path + '" alt="">' +
-                        '</a>';
+                        '<img src="https://www.flexstats.com.br' + json[k].path + '" alt="">' +
+                        //'<img src="http://localhost:8080/Fotos_Festa' + json[k].path + '" alt="">' +
+                        
+                '</a>';
 
 
                 var modal = '<div id="modal' + json[k].id + '" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog">' +
@@ -39,7 +43,8 @@ function GetFotosHome() {
                         '</button>' +
                         '</div>' +
                         '<div class="modal-body">' +
-                        '<img style="width: 100%; padding: 7px 0;" src="http://www.cyberoficina.com.br' + json[k].path + '" alt="">' +
+                        //'<img style="width: 100%; padding: 7px 0;" src="http://localhost:8080/Fotos_Festa' + json[k].path + '" alt="">' +
+                        '<img style="width: 100%; padding: 7px 0;" src="https://www.cyberoficina.com.br' + json[k].path + '" alt="">' +
                         '</div>' +
                         '<div class="modal-footer">' +
                         '<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>' +
