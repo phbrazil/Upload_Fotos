@@ -7,8 +7,12 @@ function GetFotosHome() {
         type: "GET",
         url: "https://www.cyberoficina.com.br/Fotos_Festa/API/getFotos",
         data: {token: "9ember_2020"},
-        contentType: "application/json;charset=utf-8",
-        dataType: "json",
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Access-Control-Allow-Origin': 'https://www.cyberoficina.com.br'
+
+        },
+        dataType: "jsonp",
         success: function (result) {
             //debugger;
 

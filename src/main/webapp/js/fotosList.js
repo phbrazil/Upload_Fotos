@@ -8,8 +8,11 @@ function GetFotos(current) {
         type: "GET",
         url: "https://www.cyberoficina.com.br/Fotos_Festa/API/getFotos",
         data: {token: "9ember_2020"},
-        contentType: "application/json;charset=utf-8",
-        dataType: "json",
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Access-Control-Allow-Origin': 'https://www.cyberoficina.com.br' 
+        }, 
+        dataType: "jsonp",
         success: function (result) {
             //debugger;
 
@@ -24,10 +27,10 @@ function GetFotos(current) {
                     console.log("already loaded");
 
                 } else {
-                    
+
                     //add new element to current list
                     current.push(json[k].id);
-                    
+
 
                     var option_name = '<div class="col-lg-8 offset-lg-2"><div class="blog-post bottom_120">' +
                             '<a class="blog-link" href="#">' +
@@ -61,7 +64,7 @@ function GetFotos(current) {
             console.log('eror ' + response);
         }
     });
-    
+
     return current;
 
 }
