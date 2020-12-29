@@ -24,6 +24,24 @@
         <!-- Google Fontes
         ================================================== -->
         <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet">
+
+        <style>
+            .transparencia {
+                display: none; /* Hidden by default */
+                position: fixed; /* Stay in place front is invalid - may break your css so removed */  
+                padding-top: 100px; /* Location of the box - don't know what this does?  If it is to move your modal down by 100px, then just change top below to 100px and remove this*/
+                left: 0;
+                right:0; /* Full width (left and right 0) */
+                top: 0;
+                bottom: 0; /* Full height top and bottom 0 */
+                overflow: auto; /* Enable scroll if needed */
+                background-color: rgb(0,0,0); /* Fallback color */
+                background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+                z-index: 9999; /* Sit on top - higher than any other z-index in your site*/
+
+            }
+
+        </style>
     </head>
 
     <body>
@@ -51,6 +69,20 @@
                 <span></span>
             </div>
         </header>
+
+        <div class='d-flex justify-content-md-end'>
+            <div style="position: fixed" class="toast transparencia" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <strong class="mr-auto">Obrigado!</strong>
+                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="toast-body">
+                    Sua foto foi adicionada
+                </div>
+            </div>
+        </div>
 
         <!-- Full Menu -->
         <div class="full-menu">
@@ -93,13 +125,19 @@
                 <div id="particles-js"></div>
             </section>
 
+
+
+
             <!-- PORTFOLIO CONTENT
             ================================================== -->
             <section class="content bottom_90">
                 <div class="container">
 
-                    <div class="gal">
-                        <!-- Imagens galeria -->
+                    <div id='images' class='gal'>
+
+                    </div>
+
+                    <!--div class="gal">
                         <a href="mensagem.html">
                             <img src="https://preview.ibb.co/i0PmHk/1.jpg" alt="">
                         </a>
@@ -184,8 +222,9 @@
                         <a href="mensagem.html">
                             <img src="https://preview.ibb.co/mWpE3Q/2.jpg" alt="">
                         </a>
-                    </div>
+                    </div-->
                 </div>
+
             </section>
 
             <!-- FOOTER
@@ -210,6 +249,30 @@
         </div>
 
 
+        <div id='modal'>
+            <div id="modal27" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Rafael</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="http://34.71.7.57/fotosFesta/27/rafael-aquino.jpg" alt="">
+                        </div>
+                        <div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
 
         <!-- Javascripts -->
         <script src="js/jquery-2.1.4.min.js"></script>
@@ -220,6 +283,16 @@
         <script src="js/app.js"></script>
         <script src="js/modernizr.js"></script>
         <script src="js/main.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>    <!-- Icons -->
+        <script src="js/fotosHome.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                GetFotosHome();
+
+            });
+
+        </script>
 
     </body>
 </html>
