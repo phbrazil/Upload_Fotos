@@ -141,7 +141,7 @@
                         <div class="blog-post bottom_120">
                             <a class="blog-link" href="#">
                                 <figure class="bottom_60">
-                                    <img src="${pageContext.request.contextPath}/${element.path}" alt="">
+                                    <img src='http://34.71.7.57${element.path}' alt="">
                                 </figure>
                             </a>
                             <div class="col-lg-10 offset-lg-1 content-outter">

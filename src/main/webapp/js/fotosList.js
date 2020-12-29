@@ -32,7 +32,7 @@ function GetFotos(current) {
                     var option_name = '<div class="col-lg-8 offset-lg-2"><div class="blog-post bottom_120">' +
                             '<a class="blog-link" href="#">' +
                             '<figure class="bottom_60">' +
-                            '<img src="' + json[k].path + '" alt="">' +
+                            '<img src="http://34.71.7.57' + json[k].path + '" alt="">' +
                             '</figure>' +
                             '</a>' +
                             '<div class="col-lg-10 offset-lg-1 content-outter">' +
