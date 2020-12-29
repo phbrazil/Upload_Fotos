@@ -5,8 +5,8 @@ function GetFotosHome() {
 //debugger;
     $.ajax({
         type: "GET",
-        //url: "https://www.flexstats.com.br/API/getFotos",
-        url: "http://localhost:8080/Fotos_Festa/API/getFotos",
+        url: "https://www.flexstats.com.br/API/getFotos",
+        //url: "http://localhost:8080/Fotos_Festa/API/getFotos",
         data: {token: "9ember_2020"},
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',

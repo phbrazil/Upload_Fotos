@@ -10,8 +10,10 @@ function GetFotos(current) {
         data: {token: "9ember_2020"},
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
-            'Access-Control-Allow-Origin': 'https://www.flexstats.com.br' 
-        }, 
+            'Access-Control-Allow-Origin': 'https://www.flexstats.com.br',
+            'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
+
+        },
         dataType: "jsonp",
         success: function (result) {
             //debugger;
