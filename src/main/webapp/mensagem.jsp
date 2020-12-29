@@ -141,7 +141,7 @@
                         <div class="blog-post bottom_120">
                             <a class="blog-link" href="#">
                                 <figure class="bottom_60">
-                                    <img src="${element.path}" alt="">
+                                    <img src="${pageContext.request.contextPath}/${element.path}" alt="">
                                 </figure>
                             </a>
                             <div class="col-lg-10 offset-lg-1 content-outter">
@@ -216,7 +216,7 @@
             //}
         </script>
 
-        <script>
+        <!--script>
 
             //https://www.w3schools.com/bootstrap4/bootstrap_ref_js_toasts.asp
 
@@ -224,7 +224,7 @@
                 $('.toast').toast({delay: 20000});
                 $('.toast').toast('show');
             });
-        </script>
+        </script-->
 
     </body>
 </html>
