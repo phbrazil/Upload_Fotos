@@ -5,16 +5,17 @@ function GetFotos(current) {
     console.log('searching new images');
     //debugger;
     $.ajax({
-        type: "GET",
+        type: "POST",
         url: "https://www.flexstats.com.br/API/getFotos",
+        //url: "http://localhost:8080/Fotos_Festa/API/getFotos",
         data: {token: "9ember_2020"},
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
-            'Access-Control-Allow-Origin': 'https://www.flexstats.com.br',
+            'Access-Control-Allow-Origin': '*',
             'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
 
         },
-        dataType: "jsonp",
+        dataType: "json",
         success: function (result) {
             //debugger;
 

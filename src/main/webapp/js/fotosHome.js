@@ -2,6 +2,7 @@
 
 function GetFotosHome() {
 
+    console.log('loading images');
 //debugger;
     $.ajax({
         type: "POST",
@@ -25,8 +26,8 @@ function GetFotosHome() {
                 var images = '<a href="#modal' + json[k].id + '" data-toggle="modal" data-target="#modal' + json[k].id + '">' +
                         '<img src="https://www.cyberoficina.com.br' + json[k].path + '" alt="">' +
                         //'<img src="http://localhost:8080/Fotos_Festa' + json[k].path + '" alt="">' +
-                        
-                '</a>';
+
+                        '</a>';
 
 
                 var modal = '<div id="modal' + json[k].id + '" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog">' +
