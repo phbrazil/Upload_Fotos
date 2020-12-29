@@ -4,7 +4,7 @@ function GetFotosHome() {
 
 //debugger;
     $.ajax({
-        type: "GET",
+        type: "POST",
         url: "https://www.flexstats.com.br/API/getFotos",
         //url: "http://localhost:8080/Fotos_Festa/API/getFotos",
         data: {token: "9ember_2020"},
@@ -23,7 +23,7 @@ function GetFotosHome() {
             for (var k = 0; k < (json.length); k++) {
 
                 var images = '<a href="#modal' + json[k].id + '" data-toggle="modal" data-target="#modal' + json[k].id + '">' +
-                        '<img src="https://www.flexstats.com.br' + json[k].path + '" alt="">' +
+                        '<img src="https://www.cyberoficina.com.br' + json[k].path + '" alt="">' +
                         //'<img src="http://localhost:8080/Fotos_Festa' + json[k].path + '" alt="">' +
                         
                 '</a>';
