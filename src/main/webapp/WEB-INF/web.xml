@@ -23,7 +23,7 @@
         <load-on-startup>0</load-on-startup>
     </servlet-->
 
-    <security-constraint>
+    <!--security-constraint>
         <web-resource-collection>
             <web-resource-name>Fotos_Festa</web-resource-name>
             <url-pattern>/*</url-pattern>
@@ -32,6 +32,6 @@
         <user-data-constraint>
             <transport-guarantee>CONFIDENTIAL</transport-guarantee>
         </user-data-constraint>
-    </security-constraint>
+    </security-constraint-->
 
 </web-app>
