@@ -64,7 +64,7 @@ function GetFotos(current) {
         },
         error: function (response) {
             //debugger;
-            console.log('eror ' + response);
+            console.log('error ' + response);
         }
     });
 

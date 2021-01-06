@@ -21,6 +21,7 @@ function GetFotosHome() {
 
             var json = JSON.stringify(result);
             json = JSON.parse(json);
+            
             for (var k = 0; k < (json.length); k++) {
 
                 var images = '<a href="#modal' + json[k].id + '" data-toggle="modal" data-target="#modal' + json[k].id + '">' +
@@ -65,7 +66,7 @@ function GetFotosHome() {
         },
         error: function (response) {
             //debugger;
-            console.log('eror ' + response);
+            console.log('error ' + response);
         }
     });
 
