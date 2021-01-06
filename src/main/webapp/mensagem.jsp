@@ -206,10 +206,10 @@
                 setTimeout(function () {   //  call a 10s setTimeout when the loop is called
                     current = GetFotos(current);   //  your code here
                     i++;                    //  increment the counter
-                    if (i < 10000000000) {           //  if the counter < 10, call the loop function
+                    if (i < 10000000000) {           //  if the counter < 10000000000, call the loop function
                         myLoop();             //  ..  again which will trigger another 
                     }                       //  ..  setTimeout()
-                }, 10000)
+                }, 20000)
             }
 
             myLoop();
