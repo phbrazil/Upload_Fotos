@@ -212,8 +212,15 @@ blockquote {
 }
 
 
+.bg-modal{
+    background-image: url(../img/bg-modal.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
 .main {
-    background: url(../img/bg.png) no-repeat;
+    background: url(../img/bg-home.png) no-repeat;
     background-size: cover;
     background-position: bottom;
     display: table;
@@ -1598,6 +1605,20 @@ footer p {
 }
 
 
+.modal-header{
+    border-bottom: 0px solid #eceeef !important;
+}
+
+.modal-footer {
+    border-top: 0px solid #eceeef !important;
+}
+
+.modal-content {
+    background-color: #353535!important;
+}
+
+
+
 /*------------------------ 6 Responsive ------------------------*/
 
 @media only screen and (min-width: 1201px) {
@@ -1941,7 +1962,13 @@ footer p {
 .gal img{ 
     width: 100%; 
     padding: 7px 0;
+    transition: transform 1s;
 }
+
+.gal img:hover{ 
+    transform: scale(1.2);
+}
+
 
 @media (max-width: 500px){        
     .gal { 
