@@ -47,7 +47,7 @@ function GetFotosHome() {
                                              '</div>'+
                                              '<div class="col-md-6 text-muted mt-2 mb-2">'+
                                                 '<div class="row">'+
-                                                   '<h1 style=" font-size: 30px;  padding-bottom: 20px;">' + json[k].name + '</h1>'+
+                                                   '<h1 style=" font-size: 30px;  padding-bottom: 20px; color: #093970;">' + json[k].name + '</h1>'+
                                                 '</div>'+
                                                 '<div class="row">'+
                                                    '<p>' + json[k].message + '</p>'+
