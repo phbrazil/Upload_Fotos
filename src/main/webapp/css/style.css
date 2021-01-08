@@ -222,7 +222,7 @@ blockquote {
 .main {
     background: url(../img/bg-home.png) no-repeat;
     background-size: cover;
-    background-position: bottom;
+    background-position: center;
     display: table;
     width: 100%;
     position: fixed;
@@ -1750,7 +1750,7 @@ footer p {
     }
 
     .main {
-        background: url(../img/bg-home.jpg) no-repeat right;
+        background: url(../img/bg-home-mobile.png) no-repeat center;
         background-size: cover;
     }
 
@@ -1927,6 +1927,7 @@ footer p {
 
     .main-title {
         font-size: 17px;
+        line-height: 25px
     }
 
 
