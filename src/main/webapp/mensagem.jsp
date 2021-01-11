@@ -159,7 +159,7 @@
 
                 </c:forEach>
 
-                <div id='messages'></div>
+                <div id='images'></div>
 
 
             </div>

@@ -35,8 +35,8 @@ function GetFotos(current) {
                     current.push(json[k].id);
 
 
-                    var option_name = '<div class="col-lg-8 offset-lg-2"><div class="blog-post bottom_120">' +
-                            '<a class="blog-link" href="#">' +
+                    var images = '<div class="col-lg-8 offset-lg-2"><div class="blog-post bottom_120">' +
+                            '<a class="blog-link" href="#modal' + json[k].id + '" data-toggle="modal" data-target="#modal' + json[k].id + '">' +
                             '<figure class="bottom_60">' +
                             '<img src="https://www.cyberoficina.com.br' + json[k].path + '" alt="">' +
                             '</figure>' +
@@ -50,7 +50,7 @@ function GetFotos(current) {
                             '</div>' +
                             '</div>';
 
-                    $("#messages").append(option_name);
+                    $("#images").append(images);
 
 
                     var modal = '<div id="modal' + json[k].id + '" class="modal fade bd-example-modal-lg show" tabindex="-1" role="dialog" aria-modal="true" style="padding-right: 17px;">' +
