@@ -139,7 +139,7 @@
                     <div class="col-lg-8 offset-lg-2">
                         <!-- Mensagem -->
                         <div class="blog-post bottom_120">
-                            <a class="blog-link" href="#">
+                            <a class="blog-link" href="#modal${element.id}" data-toggle="modal">
                                 <figure class="bottom_60">
                                     <img src='https://www.cyberoficina.com.br${element.path}' alt="">
                                 </figure>
@@ -166,65 +166,101 @@
 
         </div>
 
-        <!-- FOOTER
-        ================================================== -->
-        <footer>
-            <div class="container padding_90">
-                <div class="row">
-                    <div class="col-lg-9">
-                        <div class="social">
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                        </div><br>
-                        <p>© <a href='https://www.9ember.com' target="_blank" >9ember</a></p>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="uptotop">topo</div>
+
+        <c:forEach items="${fotos}" var="element" varStatus="loop"> 
+
+            <div id="modal${element.id}" class="modal fade bd-example-modal-lg show" tabindex="-1" role="dialog" aria-modal="true" style="padding-right: 17px;">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="row">
+                            </div>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-5 mb-2">
+                                        <img style="width: 100%;max-width: 200px;max-height: 200px;object-fit: cover;object-position: center;padding: 7px 0;border-radius: 50%;" src="https://www.cyberoficina.com.br${element.path}" alt="">
+                                    </div>
+                                    <div class="col-md-6 text-muted mt-2 mb-2">
+                                        <div class="row">
+                                            <h1 style=" font-size: 30px;  padding-bottom: 20px; color: #093970;">${element.name}</h1>
+                                        </div>
+                                        <div class="row">
+                                            <p>${element.message}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer"></div>
                     </div>
                 </div>
             </div>
-        </footer>
+        </div>
+    </c:forEach>
 
-        <!-- Javascripts -->
-        <script src="js/jquery-2.1.4.min.js"></script>
-        <script src="js/isotope.pkgd.min.js"></script>
-        <script src="js/packery-mode.pkgd.min.js"></script>
-        <script src="js/owl.carousel.min.js"></script>
-        <script src="js/modernizr.js"></script>   
-        <script src="js/main.js"></script>
-        <script src="js/fotosList.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>    <!-- Icons -->
 
-        <script>
+    <!-- FOOTER
+    ================================================== -->
+    <footer>
+        <div class="container padding_90">
+            <div class="row">
+                <div class="col-lg-9">
+                    <div class="social">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div><br>
+                    <p>© <a href='https://www.9ember.com' target="_blank" >9ember</a></p>
+                </div>
+                <div class="col-lg-3">
+                    <div class="uptotop">topo</div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-            var current = JSON.parse('${current}');
+    <!-- Javascripts -->
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/packery-mode.pkgd.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/modernizr.js"></script>   
+    <script src="js/main.js"></script>
+    <script src="js/fotosList.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>    <!-- Icons -->
 
-            //window.onload = (event) => {
-            var i = 1;                  //  set your counter to 1
+    <script>
 
-            function myLoop() {         //  create a loop function
-                setTimeout(function () {   //  call a 10s setTimeout when the loop is called
-                    current = GetFotos(current);   //  your code here
-                    i++;                    //  increment the counter
-                    if (i < 10000000000) {           //  if the counter < 10000000000, call the loop function
-                        myLoop();             //  ..  again which will trigger another 
-                    }                       //  ..  setTimeout()
-                }, 20000)
-            }
+        var current = JSON.parse('${current}');
 
-            myLoop();
-            //}
-        </script>
+        //window.onload = (event) => {
+        var i = 1;                  //  set your counter to 1
 
-        <!--script>
+        function myLoop() {         //  create a loop function
+            setTimeout(function () {   //  call a 10s setTimeout when the loop is called
+                current = GetFotos(current);   //  your code here
+                i++;                    //  increment the counter
+                if (i < 10000000000) {           //  if the counter < 10000000000, call the loop function
+                    myLoop();             //  ..  again which will trigger another 
+                }                       //  ..  setTimeout()
+            }, 20000)
+        }
 
-            //https://www.w3schools.com/bootstrap4/bootstrap_ref_js_toasts.asp
+        myLoop();
+        //}
+    </script>
 
-            $(document).ready(function () {
-                $('.toast').toast({delay: 20000});
-                $('.toast').toast('show');
-            });
-        </script-->
+    <!--script>
 
-    </body>
+        //https://www.w3schools.com/bootstrap4/bootstrap_ref_js_toasts.asp
+
+        $(document).ready(function () {
+            $('.toast').toast({delay: 20000});
+            $('.toast').toast('show');
+        });
+    </script-->
+
+</body>
 </html>
