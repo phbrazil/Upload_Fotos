@@ -157,6 +157,7 @@
                 <div id='messages' class='gal'>
                     
                 </div>
+                <div id='images'></div>
 
 
             </div>
@@ -197,6 +198,8 @@
             </div>
         </div>
     </c:forEach>
+
+    <div id="modalAppend"></div>
 
 
     <!-- FOOTER

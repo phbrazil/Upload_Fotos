@@ -103,12 +103,7 @@
     </head>
     <body style="background-color: black">
 
-
-
-
-
         <div class="container">
-
             <div id="carouselExampleControls" class="carousel slide mt-4 ml-4 mr-4" data-ride="carousel">
                 <div class="carousel-inner">
 
