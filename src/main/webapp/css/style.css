@@ -228,6 +228,17 @@ blockquote {
     position: fixed;
 }
 
+.txt-msg{
+    text-align: center;
+    margin: 0 auto;
+    background-color: #f1f1f1; 
+    border-radius: 10px;
+    padding: 15px; 
+    opacity: 0.9;
+    margin-top: 130px;
+    z-index: 9999;
+}
+
 #post-imagens{
     background-image: url(../img/bg-full.png);
     background-repeat: no-repeat;
@@ -265,11 +276,13 @@ blockquote {
 }
 
 .main-title {
-    font-size: 50px;
-    line-height: 60px;
+    font-size: 42px;
+    line-height: 52px;
     color: #093970;
     font-weight: 400;
 }
+
+
 
 .btn{
     text-align: center;
@@ -1951,15 +1964,20 @@ footer p {
     }
     
     p {
-    line-height: 28px;
-    font-size: 14px;
-}
+        line-height: 28px;
+        font-size: 14px;
+    }
 
     .portfolio_filter{
         height: 120%;
     }
-    
+    .txt-msg{
+        margin-top: 0px;
+    }
 }
+
+
+
 
 .gal{   
     
