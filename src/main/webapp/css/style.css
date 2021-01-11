@@ -280,6 +280,7 @@ blockquote {
     line-height: 52px;
     color: #093970;
     font-weight: 400;
+    margin-top: 15px;
 }
 
 
@@ -289,8 +290,8 @@ blockquote {
     margin: 0 auto;
     color: #fff;
     background: #01396E;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     z-index: 2;
 
 }
@@ -1941,6 +1942,7 @@ footer p {
     .main-title {
         font-size: 17px;
         line-height: 25px
+        margin-top: 15px;
     }
 
 
@@ -1973,6 +1975,8 @@ footer p {
     }
     .txt-msg{
         margin-top: 0px;
+        opacity: 0.7;
+
     }
 }
 
