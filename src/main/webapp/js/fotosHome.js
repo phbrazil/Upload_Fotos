@@ -44,7 +44,7 @@ function GetFotosHome() {
                                     '<div class="modal-body">'+
                                        '<div class="container-fluid">'+
                                           '<div class="row">'+
-                                             '<div class="col-md-5 mb-2">'+
+                                             '<div class="col-md-5 mb-2" style="height: 200px;">'+
                                                 '<img style="width: 100%;max-width: 200px;max-height: 200px;object-fit: cover;object-position: center;padding: 7px 0;border-radius: 50%;" src="https://www.cyberoficina.com.br' + json[k].path + '" alt="">'+
                                                 //'<img style="width: 100%;max-width: 200px;max-height: 200px;object-fit: cover;object-position: center;padding: 7px 0;border-radius: 50%;" src="http://localhost:8080/Fotos_Festa' + json[k].path + '" alt="">'+
                                              '</div>'+

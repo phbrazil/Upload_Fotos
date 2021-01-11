@@ -124,12 +124,6 @@
                 <div class="page-content about-page">
                     <div class="page-title top_90 bottom_60">
                         <h1 class="title">Felicitações</h1>
-                        <div class="zigzag">
-                            <svg viewBox="0 0 69.172 14.975" width="37" height="28" y="0px" x="0px" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.357,12.26 10.807,2.81 20.328,12.332
-                                  29.781,2.879 39.223,12.321 48.754,2.79  58.286,12.321"/>
-                            </svg>
-                        </div>
                     </div>
                 </div>
 
@@ -159,7 +153,10 @@
 
                 </c:forEach>
 
-                <div id='messages'></div>
+                <!--Recebe imagens Via JS-->
+                <div id='messages' class='gal'>
+                    
+                </div>
 
 
             </div>
@@ -180,7 +177,7 @@
                         <div class="modal-body">
                             <div class="container-fluid">
                                 <div class="row">
-                                    <div class="col-md-5 mb-2">
+                                    <div class="col-md-5 mb-2" style="height: 200px;">
                                         <img style="width: 100%;max-width: 200px;max-height: 200px;object-fit: cover;object-position: center;padding: 7px 0;border-radius: 50%;" src="https://www.cyberoficina.com.br${element.path}" alt="">
                                     </div>
                                     <div class="col-md-6 text-muted mt-2 mb-2">
