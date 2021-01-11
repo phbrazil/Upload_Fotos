@@ -133,10 +133,12 @@ public class addFoto extends HttpServlet {
 
                 status.put("status", "success");
 
-                response.sendRedirect("messages/success.html");
+                response.sendRedirect("index.html#post-images");
+                //response.sendRedirect("messages/success.html");
 
             } else {
-                response.sendRedirect("messages/success.html");
+                response.sendRedirect("index.html#post-images");
+                //response.sendRedirect("messages/success.html");
 
             }
 
