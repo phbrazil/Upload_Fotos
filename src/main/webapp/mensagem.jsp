@@ -113,7 +113,20 @@
             </div>
         </div>
         <div class="wrapper">
-            
+
+            <div class="page-content about-page">
+                <div class="page-title top_90 bottom_60">
+                    <h1 class="title">Felicitações</h1>
+                    <div class="zigzag">
+                        <svg viewBox="0 0 69.172 14.975" width="37" height="28" y="0px" x="0px" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.357,12.26 10.807,2.81 20.328,12.332
+                              29.781,2.879 39.223,12.321 48.754,2.79  58.286,12.321"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+
             <!--GALERIA IGUAL HOME MAGE-->
             <section id="post-images" class="bottom_60" style="margin-top: 40px">
                 <div class="container">
