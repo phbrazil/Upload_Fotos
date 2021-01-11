@@ -122,8 +122,8 @@
                         <c:forEach items="${fotos}" var="element" varStatus="loop"> 
 
                             <a href="#modal${element.id}" data-toggle="modal" data-target="#modal${element.id}">
-                                <!--img src="https://www.cyberoficina.com.br${element.path}" alt=""-->
-                                <img src="${pageContext.request.contextPath}/${element.path}" alt="">
+                                <img src="https://www.cyberoficina.com.br${element.path}" alt="">
+                                <!--img src="${pageContext.request.contextPath}/${element.path}" alt=""-->
                             </a>
                         </c:forEach>
                     </div>
