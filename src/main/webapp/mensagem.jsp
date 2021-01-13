@@ -236,7 +236,7 @@
                     if (i < 10000000000) {           //  if the counter < 10000000000, call the loop function
                         myLoop();             //  ..  again which will trigger another 
                     }                       //  ..  setTimeout()
-                }, 20000)
+                }, 5000);
             }
 
             myLoop();
