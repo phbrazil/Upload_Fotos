@@ -1640,6 +1640,22 @@ footer p {
     background-color: #d2cfd1!important;
 }
 
+/* Esconde o input */
+input[type='file'] {
+  display: none
+}
+
+.btn-file {
+    background-color: #747677;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px;
+    padding: 6px 20px;
+    position: absolute;
+    left: 0px;
+}
+
 
 
 /*------------------------ 6 Responsive ------------------------*/
@@ -1897,7 +1913,7 @@ footer p {
     }
 
     .page-title span {
-        font-size: 49px;
+        font-size: 38px;
     }
 
     .page-title .title {
