@@ -24,8 +24,6 @@ function GetFotosHome() {
             
             for (var k = 0; k < (json.length); k++) {
                 
-                console.log(k+1+" images");
-
                 var images = '<a href="#modal' + json[k].id + '" data-toggle="modal" data-target="#modal' + json[k].id + '">' +
                         '<img src="https://www.cyberoficina.com.br' + json[k].path + '" alt="">' +
                         //'<img src="http://localhost:8080/Fotos_Festa' + json[k].path + '" alt="">' +
