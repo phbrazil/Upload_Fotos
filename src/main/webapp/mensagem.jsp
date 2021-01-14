@@ -20,8 +20,6 @@
         <!-- CSS
         ================================================== -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/owl.carousel.min.css">
-        <link rel="stylesheet" href="css/owl.theme.default.min.css">
         <link rel="stylesheet" href="css/reset.css"/>
         <link rel="stylesheet" href="css/style.css"/>
 
@@ -57,8 +55,7 @@
 
     <body>
 
-
-        <!-- Preloader 
+        <!-- Preloader -->
         <div class="preloader">
             <div class="outer">
                 <div class="inner">
@@ -66,7 +63,7 @@
                 </div>
             </div>
         </div>
-        Preloader -->  
+        <!--/Preloader -->  
 
         <!-- HEADER
         ================================================== -->
@@ -115,55 +112,47 @@
                 </div>
             </div>
         </div>
-
         <div class="wrapper">
 
-            <!-- PAGE CONTENT
-            ================================================== -->
-            <div class="container">
-                <div class="page-content about-page">
-                    <div class="page-title top_90 bottom_60">
-                        <h1 class="title">Felicitações</h1>
+            <div class="page-content about-page">
+                <div class="page-title top_90 bottom_60">
+                    <h1 class="title">Felicitações</h1>
+                    <div class="zigzag">
+                        <svg viewBox="0 0 69.172 14.975" width="37" height="28" y="0px" x="0px" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.357,12.26 10.807,2.81 20.328,12.332
+                              29.781,2.879 39.223,12.321 48.754,2.79  58.286,12.321"/>
+                        </svg>
                     </div>
                 </div>
-
-                <c:forEach items="${fotos}" var="element" varStatus="loop"> 
-
-                    <!-- blog posts -->
-                    <div class="col-lg-8 offset-lg-2">
-                        <!-- Mensagem -->
-                        <div class="blog-post bottom_120">
-                            <a class="blog-link" href="#modal${element.id}" data-toggle="modal">
-                                <figure class="bottom_60">
-                                    <img src='https://www.cyberoficina.com.br${element.path}' alt="">
-                                </figure>
-                            </a>
-                            <div class="col-lg-10 offset-lg-1 content-outter">
-                                <div class="blog-categories bottom_15">
-                                </div>
-                                <h2 class="blog-title bottom_15" id="nome">${element.name}</h2>
-
-                                <p class="blog-text" id="txt">${element.message}</p>
-
-
-
-                            </div>
-                        </div>
-                    </div>
-
-                </c:forEach>
-
-                <!--Recebe imagens Via JS-->
-                <div id='messages' class='gal'>
-                    
-                </div>
-                <div id='images'></div>
-
-
             </div>
+
+
+            <!--GALERIA IGUAL HOME MAGE-->
+            <section id="post-images" class="bottom_60" style="margin-top: 40px">
+                <div class="container">
+                    <div class="gal">
+
+                        <c:forEach items="${fotos}" var="element" varStatus="loop"> 
+
+                            <a href="#modal${element.id}" data-toggle="modal" data-target="#modal${element.id}">
+                                <img src="https://www.cyberoficina.com.br${element.path}" alt="">
+                                <!--img src="${pageContext.request.contextPath}/${element.path}" alt=""-->
+                            </a>
+                        </c:forEach>
+                    </div>
+
+
+                    <!--Recebe imagens Via JS-->
+                    <div id='images' class='gal'>
+
+                    </div>
+                </div>
+
+            </section>
 
         </div>
 
+        <!--MODAL-->
 
         <c:forEach items="${fotos}" var="element" varStatus="loop"> 
 
@@ -196,71 +185,73 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </c:forEach>
+        </c:forEach>
 
-    <div id="modalAppend"></div>
+        <!--Recebe modal Via JS-->
+        <div id="modalAppend"></div>
 
 
-    <!-- FOOTER
-    ================================================== -->
-    <footer>
-        <div class="container padding_90">
-            <div class="row">
-                <div class="col-lg-9">
-                    <div class="social">
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div><br>
-                    <p>© <a href='https://www.9ember.com' target="_blank" >9ember</a></p>
-                </div>
-                <div class="col-lg-3">
-                    <div class="uptotop">topo</div>
+        <!-- FOOTER
+        ================================================== -->
+        <footer>
+            <div class="container padding_90">
+                <div class="row">
+                    <div class="col-lg-9">
+                        <div class="social">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div><br>
+                        <p>© <a href='https://www.9ember.com' target="_blank" >9ember</a></p>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="uptotop">topo</div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </footer>
 
-    <!-- Javascripts -->
-    <script src="js/jquery-2.1.4.min.js"></script>
-    <script src="js/isotope.pkgd.min.js"></script>
-    <script src="js/packery-mode.pkgd.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/modernizr.js"></script>   
-    <script src="js/main.js"></script>
-    <script src="js/fotosList.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>    <!-- Icons -->
+        <!-- Javascripts -->
+        <script src="js/jquery-2.1.4.min.js"></script>
+        <script src="js/isotope.pkgd.min.js"></script>
+        <script src="js/packery-mode.pkgd.min.js"></script>  
+        <script src="js/imagesloaded.pkgd.min.js"></script>      
+        <script src="js/particles.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/modernizr.js"></script>
+        <script src="js/main.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>    <!-- Icons -->
+        <script src="js/fotosList.js"></script>
 
-    <script>
+        <script>
 
-        var current = JSON.parse('${current}');
+            var current = JSON.parse('${current}');
 
-        //window.onload = (event) => {
-        var i = 1;                  //  set your counter to 1
+            //window.onload = (event) => {
+            var i = 1;                  //  set your counter to 1
 
-        function myLoop() {         //  create a loop function
-            setTimeout(function () {   //  call a 10s setTimeout when the loop is called
-                current = GetFotos(current);   //  your code here
-                i++;                    //  increment the counter
-                if (i < 10000000000) {           //  if the counter < 10000000000, call the loop function
-                    myLoop();             //  ..  again which will trigger another 
-                }                       //  ..  setTimeout()
-            }, 20000)
-        }
+            function myLoop() {         //  create a loop function
+                setTimeout(function () {   //  call a 10s setTimeout when the loop is called
+                    current = GetFotos(current);   //  your code here
+                    i++;                    //  increment the counter
+                    if (i < 10000000000) {           //  if the counter < 10000000000, call the loop function
+                        myLoop();             //  ..  again which will trigger another 
+                    }                       //  ..  setTimeout()
+                }, 5000);
+            }
 
-        myLoop();
-        //}
-    </script>
+            myLoop();
+            //}
+        </script>
 
-    <!--script>
+        <!--script>
+        
+            //https://www.w3schools.com/bootstrap4/bootstrap_ref_js_toasts.asp
+        
+            $(document).ready(function () {
+                $('.toast').toast({delay: 20000});
+                $('.toast').toast('show');
+            });
+        </script-->
 
-        //https://www.w3schools.com/bootstrap4/bootstrap_ref_js_toasts.asp
-
-        $(document).ready(function () {
-            $('.toast').toast({delay: 20000});
-            $('.toast').toast('show');
-        });
-    </script-->
-
-</body>
+    </body>
 </html>
